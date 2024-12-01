@@ -1,23 +1,30 @@
-
 @font-face {
   font-family: 'marguerite';
   src: url('../FONTS/marguerite.ttf') format('truetype');
-  font-weight: normal; /* Puedes ajustar: normal, bold */
-  font-style: normal; /* Puedes ajustar: normal, italic */
+  font-weight: normal;
+  /* Puedes ajustar: normal, bold */
+  font-style: normal;
+  /* Puedes ajustar: normal, italic */
 }
 
 @font-face {
   font-family: 'Thinking_of_Betty';
   src: url('../FONTS/Thinking_of_Betty.ttf') format('truetype');
-  font-weight: normal; /* Puedes ajustar: normal, bold */
-  font-style: normal; /* Puedes ajustar: normal, italic */
+  font-weight: normal;
+  /* Puedes ajustar: normal, bold */
+  font-style: normal;
+  /* Puedes ajustar: normal, italic */
 }
+
 @font-face {
   font-family: 'centurygothic';
   src: url('../FONTS/centurygothic.ttf') format('truetype');
-  font-weight: normal; /* Puedes ajustar: normal, bold */
-  font-style: normal; /* Puedes ajustar: normal, italic */
+  font-weight: normal;
+  /* Puedes ajustar: normal, bold */
+  font-style: normal;
+  /* Puedes ajustar: normal, italic */
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -33,54 +40,71 @@ body {
   position: relative;
 }
 
-   .principal{
-    
+.principal {}
+
+.principal .firstscrean {
+  padding-top: 20px !important;
+  height: 100vh;
+
+}
+
+.principal .firstscrean img {
+  width: 90%;
+
+}
+
+.principal .firstscrean .header {
+
+  padding-top: 15%;
+}
+
+.subtitulos {
+  font-size: 20px !important;
+  font-family: 'centurygothic', sans-serif;
+  color: #b49602;
+  font-style: italic;
+}
+.subtitulosItalic {
+  font-size: 25px !important;
+  font-family: 'centurygothic', sans-serif;
+  color: #b49602;
+  font-style: italic;
+}
+
+.principal .firstscrean .names {
+  font-family: 'Thinking_of_Betty', sans-serif;
+  letter-spacing: 5PX !important;
+  font-size: 50px !important;
+  line-height: 2;
+  /* Ajusta la altura entre líneas */
+  margin: 20px 0;
+  color: #091e47;
+}
 
 
-  }
-    .principal .firstscrean {
-      padding-top: 20px !important;
-      height: 100vh;
-     
-    }
+.audio-container {
+  text-align: center;
+  /* Centra el reproductor */
+  margin: 20px;
+}
 
-    .principal .firstscrean img{
-      width: 90%;
-      
-    }
-    .principal .firstscrean .header {
-      font-size: 20px !important;
-      font-family: 'centurygothic', sans-serif;
-      color: #b49602;
-      padding-top: 15%;
-    }
+audio {
+  width: 100%;
+  /* Ajusta el ancho del reproductor */
+  max-width: 300px;
+  /* Define un ancho máximo */
+}
 
-    .principal .firstscrean .names {
-      font-family: 'Thinking_of_Betty', sans-serif;
-      letter-spacing: 5PX  !important;
-      font-size: 50px !important;
-      line-height: 2; /* Ajusta la altura entre líneas */
-      margin: 20px 0;
-      color: #091e47;
-    }
-    
-
-    .audio-container {
-      text-align: center; /* Centra el reproductor */
-      margin: 20px;
-    }
-    
-    audio {
-      width: 100%; /* Ajusta el ancho del reproductor */
-      max-width: 300px; /* Define un ancho máximo */
-    }
-    
+.details{
+  padding: 0 10%;
+  font-size: 12px;
+  font-style: italic;
+}
 
 
+.imagen {
 
-.imagen{
-  
-  min-width:35vw;
+  min-width: 35vw;
 }
 
 
@@ -90,54 +114,61 @@ body {
 
 
 
- /* Clase base para imágenes fijas */
+/* Clase base para imágenes fijas */
 .fixed-image {
-    position: absolute;
-    z-index: -10; /* Asegura que esté por encima del contenido */
+  position: absolute;
+  z-index: -10;
+  /* Asegura que esté por encima del contenido */
 }
 
 .fixed-image img {
-    width: 5vh; /* Ajusta el tamaño de las imágenes */
-    height: auto;
+  width: 5vh;
+  /* Ajusta el tamaño de las imágenes */
+  height: auto;
 }
 
 /* Esquinas específicas */
 .fixed-top-left {
-    top: 0;
-    left: 0;
+  top: 0;
+  left: 0;
 }
 
 .fixed-top-right {
-    top: 0;
-    right: 0;
+  top: 0;
+  right: 0;
 }
 
 .fixed-bottom-left {
-    bottom: 0;
-    left: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .fixed-bottom-right {
-    bottom: 0;
-    right: 0;
+  bottom: 0;
+  right: 0;
 }
 
 
 
-   
-    
-   /* Animación: Aparecer de abajo hacia arriba */
+
+
+/* Animación: Aparecer de abajo hacia arriba */
 @keyframes aparecer-desde-abajo {
   0% {
     opacity: 0;
-    transform: translateY(100px); /* Inicio: Muy abajo */
+    transform: translateY(100px);
+    /* Inicio: Muy abajo */
   }
+
   50% {
     opacity: 0.5;
-    transform: translateY(20px); /* Mitad: Cerca de su posición final */
+    transform: translateY(20px);
+    /* Mitad: Cerca de su posición final */
   }
+
   100% {
     opacity: 1;
-    transform: translateY(0); /* Final: En su posición final */
+    transform: translateY(0);
+    /* Final: En su posición final */
   }
 }
