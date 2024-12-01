@@ -80,7 +80,14 @@ body {
   margin: 20px 0;
   color: #091e47;
 }
+.principal .firstscrean a{
+  margin-top: 40px;
+  background: #091e47;
+  color: #fff;
+  border-radius: 20px 0 20px 0;
+  padding: 15px 30px;
 
+}
 
 .audio-container {
   text-align: center;
