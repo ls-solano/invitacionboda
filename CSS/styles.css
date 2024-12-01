@@ -1,0 +1,138 @@
+
+@font-face {
+  font-family: 'marguerite';
+  src: url('../FONTS/marguerite.ttf') format('truetype');
+  font-weight: normal; /* Puedes ajustar: normal, bold */
+  font-style: normal; /* Puedes ajustar: normal, italic */
+}
+
+@font-face {
+  font-family: 'Thinking_of_Betty';
+  src: url('../FONTS/Thinking_of_Betty.ttf') format('truetype');
+  font-weight: normal; /* Puedes ajustar: normal, bold */
+  font-style: normal; /* Puedes ajustar: normal, italic */
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: #202020;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background: url('../IMG/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* Blanco semitransparente */
+  pointer-events: none; /* Permite interacción con elementos debajo */
+}
+
+
+
+
+
+
+    .principal {
+    
+     
+    }
+    
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6); /* Oscurece el fondo */
+      z-index: 1; /* Asegura que el overlay esté sobre el fondo */
+    }
+    
+    .principal h1 {
+      position: relative;
+      z-index: 2; /* Texto por encima del overlay */
+      font-size: 3rem;
+      font-family: 'Cursive', sans-serif;
+    }
+    
+    .names {
+      font-family: 'Thinking_of_Betty', sans-serif;
+      letter-spacing: 5PX;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Clase base para imágenes fijas */
+.fixed-image {
+    position: absolute;
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+}
+
+.fixed-image img {
+    width: 5vh; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+}
+
+/* Esquinas específicas */
+.fixed-top-left {
+    top: 0;
+    left: 0;
+}
+
+.fixed-top-right {
+    top: 0;
+    right: 0;
+}
+
+.fixed-bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.fixed-bottom-right {
+    bottom: 0;
+    right: 0;
+}
+
+
+
+   
+    
+   /* Animación: Aparecer de abajo hacia arriba */
+@keyframes aparecer-desde-abajo {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); /* Inicio: Muy abajo */
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(20px); /* Mitad: Cerca de su posición final */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Final: En su posición final */
+  }
+}
