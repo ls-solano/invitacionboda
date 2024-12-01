@@ -69,6 +69,7 @@ body {
   font-family: 'centurygothic', sans-serif;
   color: #b49602;
   font-style: italic;
+  margin-bottom: 20px;
 }
 
 .principal .firstscrean .names {
@@ -87,6 +88,9 @@ body {
   border-radius: 20px 0 20px 0;
   padding: 15px 30px;
 
+}
+.mensajeinvitado{
+  margin-bottom: 70px;
 }
 
 .audio-container {
