@@ -33,9 +33,11 @@ body {
   position: relative;
 }
 
-   
+   .principal{
+    padding-top: 15%;
+   }
     .principal .firstscrean {
-      padding-top: 20px;
+      padding-top: 20px !important;
       height: 100vh;
     }
 
@@ -43,15 +45,18 @@ body {
       width: 90%;
       
     }
+    .principal .firstscrean .header {
+      font-size: 20px !important;
+      font-family: 'centurygothic', sans-serif;
+
+    }
+
     .principal .firstscrean .names {
       font-family: 'Thinking_of_Betty', sans-serif;
-      letter-spacing: 5PX;
-      font-size: 40px;
-    }
-    .principal .firstscrean {
-      font-size: 10px;
-    
-      font-family: 'centurygothic', sans-serif;
+      letter-spacing: 5PX  !important;
+      font-size: 50px !important;
+      line-height: 2; /* Ajusta la altura entre líneas */
+      margin: 20px 0;
     }
     
 
