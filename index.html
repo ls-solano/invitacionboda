@@ -24,11 +24,16 @@
       <h1 class="header">Nuestra Boda</h1>
       <h1 class="names">Luis Angel <br> & Mariana</h1>
       <img src="IMG/noviossinfondo.png" alt="">
-
+      <audio id="audioPlayer" autoplay>
+        <source src="music/fondo.mp3" type="audio/mpeg">
+        <source src="music/fondo.mp3" type="audio/ogg">
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
     </div>
 
-
-
+   
+    
+    <h2>¡Estás Invitado</h2>
     <p class="details">
       Hay instantes que brillan más cuando los compartimos con quienes llevamos en el corazón.
     </p>
@@ -65,8 +70,15 @@
     </p>
   </div>
 
-
+  <script>
+    // Ajustar el volumen al 50% al cargar la página
+    document.addEventListener("DOMContentLoaded", function () {
+      const audio = document.getElementById("audioPlayer");
+      audio.volume = 0.2; // 50% de volumen
+    });
+  </script>
 
 </body>
+
 
 </html>

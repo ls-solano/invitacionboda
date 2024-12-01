@@ -34,11 +34,14 @@ body {
 }
 
    .principal{
-    padding-top: 15%;
-   }
+    
+
+
+  }
     .principal .firstscrean {
       padding-top: 20px !important;
       height: 100vh;
+     
     }
 
     .principal .firstscrean img{
@@ -49,6 +52,7 @@ body {
       font-size: 20px !important;
       font-family: 'centurygothic', sans-serif;
       color: #b49602;
+      padding-top: 15%;
     }
 
     .principal .firstscrean .names {
@@ -61,7 +65,16 @@ body {
     }
     
 
-
+    .audio-container {
+      text-align: center; /* Centra el reproductor */
+      margin: 20px;
+    }
+    
+    audio {
+      width: 100%; /* Ajusta el ancho del reproductor */
+      max-width: 300px; /* Define un ancho máximo */
+    }
+    
 
 
 
