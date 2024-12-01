@@ -48,6 +48,9 @@
     
     <p class="date">23 de Diciembre, 2024 - 2:30 PM</p>
 
+
+    <div id="cronometro" class="subtitulosItalic"></div>
+
     <h3 class="section-title">Con el apoyo de nuestros padres</h3>
     <p class="details">
       Sr. Rafael Sánchez M. & Sra. Angelita Solano S.<br>
@@ -80,6 +83,29 @@
       const audio = document.getElementById("audioPlayer");
       audio.volume = 0.2; // 50% de volumen
     });
+
+
+    const fechaObjetivo = new Date('2024-12-23T13:00:00');
+    const cronometro = document.getElementById('cronometro');
+
+    function actualizarCronometro() {
+      const fechaActual = new Date();
+      const diferencia = fechaObjetivo.getTime() - fechaActual.getTime();
+
+      if (diferencia <= 0) {
+        cronometro.textContent = '¡Ha llegado la fecha!';
+      } else {
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+        cronometro.textContent = `${dias} | ${horas} | ${minutos} : ${segundos} `;
+      }
+    }
+
+    actualizarCronometro();
+    setInterval(actualizarCronometro, 1000);
   </script>
 
 </body>

@@ -90,9 +90,13 @@ body {
 
 }
 .mensajeinvitado{
-  margin-bottom: 70px;
+  margin-bottom: 0px;
 }
-
+#cronometro {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
 .audio-container {
   text-align: center;
   /* Centra el reproductor */
