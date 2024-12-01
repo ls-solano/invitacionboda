@@ -12,6 +12,12 @@
   font-weight: normal; /* Puedes ajustar: normal, bold */
   font-style: normal; /* Puedes ajustar: normal, italic */
 }
+@font-face {
+  font-family: 'centurygothic';
+  src: url('../FONTS/centurygothic.ttf') format('truetype');
+  font-weight: normal; /* Puedes ajustar: normal, bold */
+  font-style: normal; /* Puedes ajustar: normal, italic */
+}
 body {
   margin: 0;
   padding: 0;
@@ -27,18 +33,25 @@ body {
   position: relative;
 }
 
-    
-    .principal  {
-      font-size: 18px;
-      margin: 10%;
+   
+    .principal .firstscrean {
+      padding-top: 20px;
+      height: 100vh;
     }
-    
+
     .principal .firstscrean img{
       width: 90%;
+      
     }
     .principal .firstscrean .names {
       font-family: 'Thinking_of_Betty', sans-serif;
       letter-spacing: 5PX;
+      font-size: 40px;
+    }
+    .principal .firstscrean {
+      font-size: 10px;
+    
+      font-family: 'centurygothic', sans-serif;
     }
     
 
@@ -46,8 +59,10 @@ body {
 
 
 
-
-
+.imagen{
+  
+  min-width:35vw;
+}
 
 
 
@@ -59,7 +74,7 @@ body {
  /* Clase base para imágenes fijas */
 .fixed-image {
     position: absolute;
-    z-index: 1000; /* Asegura que esté por encima del contenido */
+    z-index: -10; /* Asegura que esté por encima del contenido */
 }
 
 .fixed-image img {
