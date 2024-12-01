@@ -27,32 +27,16 @@ body {
   position: relative;
 }
 
-
-
-
-    .principal {
     
-     
+    .principal  {
+      font-size: 18px;
+      margin: 10%;
     }
     
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6); /* Oscurece el fondo */
-      z-index: 1; /* Asegura que el overlay esté sobre el fondo */
+    .principal .firstscrean img{
+      width: 90%;
     }
-    
-    .principal h1 {
-      position: relative;
-      z-index: 2; /* Texto por encima del overlay */
-      font-size: 3rem;
-      font-family: 'Cursive', sans-serif;
-    }
-    
-    .names {
+    .principal .firstscrean .names {
       font-family: 'Thinking_of_Betty', sans-serif;
       letter-spacing: 5PX;
     }
