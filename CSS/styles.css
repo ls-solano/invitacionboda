@@ -48,7 +48,7 @@ body {
     .principal .firstscrean .header {
       font-size: 20px !important;
       font-family: 'centurygothic', sans-serif;
-
+      color: #b49602;
     }
 
     .principal .firstscrean .names {
@@ -57,6 +57,7 @@ body {
       font-size: 50px !important;
       line-height: 2; /* Ajusta la altura entre líneas */
       margin: 20px 0;
+      color: #091e47;
     }
     
 
