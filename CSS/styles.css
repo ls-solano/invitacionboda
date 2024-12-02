@@ -92,6 +92,25 @@ body {
 .mensajeinvitado{
   margin-bottom: 0px;
 }
+.date{
+  font-family: 'Thinking_of_Betty', sans-serif;
+  letter-spacing: 5PX !important;
+  font-size: 20px !important;
+  line-height: 2;
+  /* Ajusta la altura entre líneas */
+  margin: 20px 0;
+  color: #091e47;
+  font-weight: bold;
+}
+.anilloanimado-container{
+  margin: 0 auto;
+  text-align: center;
+}
+.anilloanimado-container dotlottie-player{
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+}
 
 .cronometro {
   display: flex;
