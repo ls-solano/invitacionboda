@@ -217,10 +217,26 @@ audio {
   min-width: 35vw;
 }
 
+.dresscode{
+  width: 100%;
+margin: 50px auto;
+}
 
 
-
-
+.dresscode h3{
+  color: #091e47;
+  font-family: 'Thinking_of_Betty', sans-serif;
+  font-size: 30px;
+  margin: 30px auto;
+}
+.dresscode p{
+  font-size: 20px;
+  font-style: italic;
+}
+.dresscode img{
+  width: 30%;
+  margin: 30px auto ;
+}
 
 
 
@@ -259,9 +275,37 @@ audio {
 }
 
 
+.footer{
+  margin: 30px auto;
+  background: #091e47;
+  color:#fff;
+  padding: 40px;
+}
 
-
-
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #333;
+}
+.masonry {
+  column-count: 3; /* Número de columnas */
+  column-gap: 15px; /* Espacio entre columnas */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.masonry-item {
+  margin-bottom: 15px;
+  break-inside: avoid; /* Evita que los elementos se corten entre columnas */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.masonry-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 /* Animación: Aparecer de abajo hacia arriba */
 @keyframes aparecer-desde-abajo {
   0% {
