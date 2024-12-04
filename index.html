@@ -25,7 +25,7 @@
       <h1 class="header subtitulos  entrada">Nuestra Boda</h1>
       <h1 class="names entrada">Luis Angel <br> & Mariana</h1>
       <img src="IMG/noviossinfondo.png" class="entrada" alt="">
-      <audio id="audioPlayer" autoplay>
+      <audio id="audioPlayer" autoplay muted>
         <source src="https://luisymariana.com/invitacion/music/fondo.mp3" type="audio/mpeg">
         <source src="https://luisymariana.com/invitacion/music/fondo.mp3" type="audio/ogg">
         Tu navegador no soporta el reproductor de audio.
@@ -209,7 +209,7 @@
     <div class="regalos entrada">
       <h3>Te esperamos</h3>
       <p class="mb-4">
-        <span id="mensaje">Cargando invitación...</span>
+        <span id="mensaje">Les hemos reservado</span>
         <b style="font-size: 40px;">
           <span id="pases"></span></b>
         lugares. Agradecemos confirmar asistencia
@@ -284,7 +284,7 @@
     // Personalizar el contenido
     if (familia) {
       document.getElementById("mensaje").textContent = `Familia ${familia.charAt(0).toUpperCase() + familia.slice(1)}, están cordialmente invitados.`;
-      document.getElementById("pases").textContent = pases ? `Número de pases: ${pases}` : '';
+      document.getElementById("pases").textContent = pases ? ` ${pases}` : '';
     } else {
       document.getElementById("mensaje").textContent = "Invitación no válida. Por favor, contacta con los organizadores.";
     }
