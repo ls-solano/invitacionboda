@@ -281,7 +281,9 @@ margin: 50px auto;
   color:#fff;
   padding: 40px;
 }
-
+.galeria{
+  margin: 50px auto;
+}
 .galeria h1 {
   color: #091e47;
   font-family: 'Thinking_of_Betty', sans-serif;
