@@ -24,10 +24,10 @@
     <div class="firstscrean ">
       <h1 class="header subtitulos  entrada">Nuestra Boda</h1>
       <h1 class="names entrada">Luis Angel <br> & Mariana</h1>
-      <img src="IMG/noviossinfondo.png"  class="entrada" alt="">
+      <img src="IMG/noviossinfondo.png" class="entrada" alt="">
       <audio id="audioPlayer" autoplay>
-        <source src="music/fondo.mp3" type="audio/mpeg">
-        <source src="music/fondo.mp3" type="audio/ogg">
+        <source src="https://luisymariana.com/invitacion/music/fondo.mp3" type="audio/mpeg">
+        <source src="https://luisymariana.com/invitacion/music/fondo.mp3" type="audio/ogg">
         Tu navegador no soporta el reproductor de audio.
       </audio>
       <!--div>
@@ -89,7 +89,7 @@
       </div>
       <div class="ella">
         <img src="IMG/novia-icon.png" alt="">
-        <p> Sra. Idalia Vázquez M.</p>
+        <p class="details"> Sra. Idalia Vázquez M.</p>
       </div>
 
     </div>
@@ -183,8 +183,10 @@
     <div class="regalos entrada">
       <h3>Regalos</h3>
       <img src="IMG/regalo.png" alt="">
-      <p>Tu presencia es lo más importante, pero si deseas hacernos un regalo, aquí tienes nuestros datos para hacerlo de forma digital o bien presencial 🤭 </p>
-      <a  class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Ver datos de cuenta</a>
+      <p>Tu presencia es lo más importante, pero si deseas hacernos un regalo, aquí tienes nuestros datos para hacerlo
+        de forma digital o bien presencial 🤭 </p>
+      <a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+        aria-controls="collapseExample">Ver datos de cuenta</a>
       <div class="collapse" id="collapseExample">
         <div class="">
           <b>BanCoppel</b>
@@ -196,21 +198,30 @@
           Número de Cuenta CLABE: 137626101702602745
           <br>
           Número de Tarjeta: 4169160861961226
-      
+
         </div>
       </div>
     </div>
+
+
+
+
     <div class="regalos entrada">
       <h3>Te esperamos</h3>
-      <p class="mb-4">  Les hemos reservado <b style="font-size: 40px;">2</b> lugares. Agradecemos confirmar asistencia </p>
+      <p class="mb-4">
+        <span id="mensaje">Cargando invitación...</span>
+        <b style="font-size: 40px;">
+          <span id="pases"></span></b>
+        lugares. Agradecemos confirmar asistencia
+      </p>
       <div class="btnsconfirm">
-        <a href="https://wa.link/uyqo5j" class="btn">Confirmar a Mariana <img src="IMG/whatsapp.png" alt=""></a>      
-        <a href="https://wa.link/9laiof" class="btn">Confirmar a Luis Angel <img src="IMG/whatsapp.png" alt=""></a>      
-    
-      </div>      
-       </div>
+        <a href="https://wa.link/uyqo5j" class="btn">Confirmar a Mariana <img src="IMG/whatsapp.png" alt=""></a>
+        <a href="https://wa.link/9laiof" class="btn">Confirmar a Luis Angel <img src="IMG/whatsapp.png" alt=""></a>
+
+      </div>
+    </div>
     <div class="footer entrada">
-     Luis Angel & Mariana
+      Luis Angel & Mariana
     </div>
   </div>
 
@@ -243,27 +254,47 @@
       segundosElement.textContent = segundos;
     }, 1000);
     document.addEventListener('DOMContentLoaded', () => {
-  const elementos = document.querySelectorAll('.entrada');
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // Deja de observar después de la animación
-      }
+      const elementos = document.querySelectorAll('.entrada');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Deja de observar después de la animación
+          }
+        });
+      }, {
+        threshold: 0.5 // Proporción visible para activar el efecto
+      });
+
+      elementos.forEach(el => {
+        observer.observe(el);
+      });
     });
-  }, {
-    threshold: 0.5 // Proporción visible para activar el efecto
-  });
+    // Función para obtener los parámetros de la URL
+    function obtenerParametro(parametro) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(parametro);
+    }
 
-  elementos.forEach(el => {
-    observer.observe(el);
-  });
-});
+    // Obtener valores de la URL
+    const familia = obtenerParametro('familia');
+    const pases = obtenerParametro('pases');
 
+    // Personalizar el contenido
+    if (familia) {
+      document.getElementById("mensaje").textContent = `Familia ${familia.charAt(0).toUpperCase() + familia.slice(1)}, están cordialmente invitados.`;
+      document.getElementById("pases").textContent = pases ? `Número de pases: ${pases}` : '';
+    } else {
+      document.getElementById("mensaje").textContent = "Invitación no válida. Por favor, contacta con los organizadores.";
+    }
   </script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
 </body>
 
 
