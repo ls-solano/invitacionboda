@@ -13,18 +13,18 @@
 </head>
 
 <body>
-  <div class="fixed-image fixed-top-right">
+  <div class="fixed-image fixed-top-right entrada">
     <img src="IMG/flowerrigth.png" class="imagen" srcset="">
   </div>
-  <div class="fixed-image fixed-top-left ">
+  <div class="fixed-image fixed-top-left entrada">
     <img src="IMG/flowerleft.png" class="imagen " srcset="">
   </div>
 
-  <div class="principal text-center">
-    <div class="firstscrean">
-      <h1 class="header subtitulos">Nuestra Boda</h1>
-      <h1 class="names">Luis Angel <br> & Mariana</h1>
-      <img src="IMG/noviossinfondo.png" alt="">
+  <div class="principal text-center ">
+    <div class="firstscrean ">
+      <h1 class="header subtitulos  entrada">Nuestra Boda</h1>
+      <h1 class="names entrada">Luis Angel <br> & Mariana</h1>
+      <img src="IMG/noviossinfondo.png"  class="entrada" alt="">
       <audio id="audioPlayer" autoplay>
         <source src="music/fondo.mp3" type="audio/mpeg">
         <source src="music/fondo.mp3" type="audio/ogg">
@@ -37,7 +37,7 @@
     </div>
 
 
-    <div class="mensajeinvitado">
+    <div class="mensajeinvitado entrada">
       <h2 class="subtitulosItalic">¡Estás Invitado!</h2>
       <p class="details">
         Hay instantes que brillan más cuando los compartimos con quienes llevamos en el corazón.
@@ -53,10 +53,10 @@
 
     </div>
 
-    <p class="date ">23 de Diciembre 2024 <br> 2:30 pm</p>
+    <p class="date entrada">23 de Diciembre 2024 <br> 2:30 pm</p>
 
 
-    <div class="cronometro">
+    <div class="cronometro entrada">
       <div class="unidad-tiempo">
         <div class="circulo" id="dias"></div>
         <span>Días</span>
@@ -75,7 +75,7 @@
       </div>
     </div>
 
-    <div class="padres">
+    <div class="padres entrada">
       <h3 class="section-title subtitulosItalic">Con el apoyo de nuestros padres</h3>
 
       <div class="el">
@@ -95,7 +95,7 @@
     </div>
 
 
-    <div class="infoubicacion">
+    <div class="infoubicacion entrada">
       <h3 class="section-title">Discurso de bodas</h3>
       <div class="d-flex">
         <div class="horafecha">
@@ -115,7 +115,7 @@
     </div>
 
 
-    <div class="infoubicacion">
+    <div class="infoubicacion entrada">
       <h3 class="section-title">Recepción</h3>
       <div class="d-flex">
         <div class="horafecha">
@@ -134,7 +134,7 @@
       <a href="https://maps.app.goo.gl/N5ChpfrRkkWonV8Q6" class="btn my-5">Ir al Happy Children</a>
     </div>
 
-    <div class="dresscode">
+    <div class="dresscode entrada">
       <h3>DressCode</h3>
       <p>Regional istmeño</p>
       <img src="IMG/dresscode.png" alt="">
@@ -143,7 +143,7 @@
 
 
 
-    <div class="galeria">
+    <div class="galeria entrada">
       <h1>Recuerdos de Nuestra historia</h1>
       <div class="masonry">
         <div class="masonry-item">
@@ -180,24 +180,38 @@
       </div>
     </div>
 
-    <div class="regalos">
+    <div class="regalos entrada">
       <h3>Regalos</h3>
       <img src="IMG/regalo.png" alt="">
       <p>Tu presencia es lo más importante es tu presencia, pero si deseas hacernos un regalo, aquí tienes nuestros
         datos</p>
-      <a href="#" class="btn">Ver datos de cuenta</a>
+      <a  class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Ver datos de cuenta</a>
+      <div class="collapse" id="collapseExample">
+        <div class="">
+          <b>BanCoppel</b>
+          <br>
+          Luis Angel Sánchez Solano
+          <br>
+          Número de Cuenta: 10170260274
+          <br>
+          Número de Cuenta CLABE: 137626101702602745
+          <br>
+          Número de Tarjeta: 4169160861961226
+          <p>o bien presencial 🤭</p>
+        </div>
+      </div>
     </div>
-    <div class="regalos ">
+    <div class="regalos entrada">
       <h3>Te esperamos</h3>
       <p class="mb-4">  Les hemos reservado <b style="font-size: 40px;">2</b> lugares. Agradecemos confirmar asistencia </p>
       <div class="btnsconfirm">
-        <a href="#" class="btn">Confirmar a Mariana <img src="IMG/whatsapp.png" alt=""></a>      
-        <a href="#" class="btn">Confirmar a Luis Angel <img src="IMG/whatsapp.png" alt=""></a>      
+        <a href="https://wa.link/uyqo5j" class="btn">Confirmar a Mariana <img src="IMG/whatsapp.png" alt=""></a>      
+        <a href="https://wa.link/9laiof" class="btn">Confirmar a Luis Angel <img src="IMG/whatsapp.png" alt=""></a>      
     
       </div>      
        </div>
-    <div class="footer">
-    
+    <div class="footer entrada">
+     Luis Angel & Mariana
     </div>
   </div>
 
@@ -229,8 +243,28 @@
       minutosElement.textContent = minutos;
       segundosElement.textContent = segundos;
     }, 1000);
-  </script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const elementos = document.querySelectorAll('.entrada');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Deja de observar después de la animación
+      }
+    });
+  }, {
+    threshold: 0.5 // Proporción visible para activar el efecto
+  });
 
+  elementos.forEach(el => {
+    observer.observe(el);
+  });
+});
+
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 
 

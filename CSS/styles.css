@@ -213,6 +213,9 @@ audio {
   border-radius:  15px 0 15px 0;
   padding: 10px 30px ;
 }
+.regalos{
+  margin:80px auto;
+}
 .regalos a{
   margin: 20px auto;
   
@@ -294,10 +297,11 @@ margin: 50px auto;
 
 
 .footer{
-  margin: 30px auto;
-  background: #091e47;
-  color:#fff;
+  margin: 60px auto;
+  color:#091e47;
   padding: 40px;
+  
+  font-family: 'Thinking_of_Betty', sans-serif;
 }
 .galeria{
   margin: 50px auto;
@@ -327,6 +331,18 @@ margin: 50px auto;
   height: auto;
   display: block;
 }
+
+.entrada {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.5s, transform 2s;
+}
+
+.entrada.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 
 /* Animación: Aparecer de abajo hacia arriba */
