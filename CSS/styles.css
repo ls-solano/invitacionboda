@@ -151,7 +151,7 @@ body {
 }
 .padres div img{
   width: 40px;
-  margin: 0px 0;
+  margin: 10px 0;
 }
 audio {
   width: 100%;
@@ -173,8 +173,41 @@ audio {
   font-size: 14px;
   margin: 50px auto;
 }
-.imagen {
 
+.infoubicacion{
+  width: 90%;
+  text-align: center;
+  font-size: 14px;
+  margin: 50px auto;
+}
+.infoubicacion h3{
+  color: #091e47;
+  font-family: 'Thinking_of_Betty', sans-serif;
+  font-size: 30px;
+}
+.infoubicacion div .horafecha{
+  width: 40%;
+  text-align: right;
+  border-right: 1px solid #091e47;
+  padding-right: 15px;
+
+}
+.infoubicacion div .contentdetalles{
+  width: 60%;
+
+}
+
+.infoubicacion div .horafecha .hora{
+   font-size: 40px;
+   letter-spacing: 0px !important;
+   color: #b49602;
+  font-family: 'Thinking_of_Betty', sans-serif;
+}
+.infoubicacion div div .details{
+  font-size: 16px;
+
+}
+.imagen {
   min-width: 35vw;
 }
 
