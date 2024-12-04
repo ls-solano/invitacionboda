@@ -66,8 +66,8 @@ body {
 }
 .subtitulosItalic {
   font-size: 25px !important;
-  font-family: 'centurygothic', sans-serif;
-  color: #b49602;
+  font-family: 'Thinking_of_Betty', sans-serif;
+  color: #091e47;
   font-style: italic;
   margin-bottom: 20px;
 }
@@ -214,7 +214,12 @@ audio {
   padding: 10px 30px ;
 }
 .regalos a{
-  margin: 50px auto;
+  margin: 20px auto;
+  
+}
+.regalos .btnsconfirm{
+  width: 90%;
+  ;
 }
 .imagen {
   min-width: 35vw;
@@ -242,6 +247,13 @@ margin: 50px auto;
 .dresscode img, .regalos img{
   width: 30%;
   margin: 30px auto ;
+}
+.btnsconfirm{
+  margin: 0 auto;
+}
+.btnsconfirm a img{
+  width: 23px;
+  margin: 0 5px;
 }
 
 
@@ -315,6 +327,8 @@ margin: 50px auto;
   height: auto;
   display: block;
 }
+
+
 /* Animación: Aparecer de abajo hacia arriba */
 @keyframes aparecer-desde-abajo {
   0% {
