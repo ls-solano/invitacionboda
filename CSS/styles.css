@@ -282,10 +282,11 @@ margin: 50px auto;
   padding: 40px;
 }
 
-h1 {
-  text-align: center;
-  margin: 20px 0;
-  color: #333;
+.galeria h1 {
+  color: #091e47;
+  font-family: 'Thinking_of_Betty', sans-serif;
+  font-size: 30px;
+  margin: 30px auto;
 }
 .masonry {
   column-count: 3; /* Número de columnas */
