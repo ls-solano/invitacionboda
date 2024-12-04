@@ -207,11 +207,14 @@ audio {
   font-size: 16px;
 
 }
-.infoubicacion  a{
+.infoubicacion  a , .regalos a{
   color:#fff;
   background: #091e47;
   border-radius:  15px 0 15px 0;
   padding: 10px 30px ;
+}
+.regalos a{
+  margin: 50px auto;
 }
 .imagen {
   min-width: 35vw;
@@ -229,11 +232,14 @@ margin: 50px auto;
   font-size: 30px;
   margin: 30px auto;
 }
-.dresscode p{
+.dresscode p , .regalos p{
   font-size: 20px;
   font-style: italic;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
 }
-.dresscode img{
+.dresscode img, .regalos img{
   width: 30%;
   margin: 30px auto ;
 }
@@ -284,7 +290,7 @@ margin: 50px auto;
 .galeria{
   margin: 50px auto;
 }
-.galeria h1 {
+.galeria h1 , .regalos h3{
   color: #091e47;
   font-family: 'Thinking_of_Betty', sans-serif;
   font-size: 30px;
